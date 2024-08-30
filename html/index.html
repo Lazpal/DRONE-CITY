@@ -203,7 +203,7 @@
         <div id="traffic" class="data-box">Κίνηση: --</div>
     </div>
 
-    <!-- Dark Mode Switch with Tooltip -->
+    <!-- Dark Mode Switch με Tooltip -->
     <div class="wrapper tooltip">
         <input type="checkbox" id="darkModeSwitch" name="checkbox" class="switch">
         <span class="tooltiptext">Εναλλαγή Dark Mode</span>
@@ -227,6 +227,30 @@
         let currentTemperature = 0;
         let currentAirQuality = 0;
         let currentTraffic = 0;
+
+        // Συνάρτηση για την Ανάκτηση Δεδομένων από το API
+        async function fetchDataFromAPI() {
+            try {
+                const response = await fetch('https://your-app-name.onrender.com/data');  // Βάλε το σωστό URL του API
+                const data = await response.json();
+                
+                // Ενημέρωση των δεδομένων στην ιστοσελίδα
+                document.getElementById('temperature').innerText = `Θερμοκρασία: ${data.temperature}°C`;
+                document.getElementById('airQuality').innerText = `Ποιότητα Αέρα: Δείκτης ${data.airQuality}`;
+                document.getElementById('traffic').innerText = `Κίνηση: ${data.traffic}`;
+
+                // Έλεγχος για ειδοποιήσεις
+                if (data.temperature > 35) sendNotification("Προειδοποίηση Θερμοκρασίας", `Η θερμοκρασία είναι ${data.temperature}°C!`);
+                if (data.airQuality > 3) sendNotification("Προειδοποίηση Ποιότητας Αέρα", `Η ποιότητα αέρα είναι χαμηλή: Δείκτης ${data.airQuality}`);
+                if (data.traffic > 80) sendNotification("Προειδοποίηση Κίνησης", `Υψηλή κίνηση: ${data.traffic}`);
+                
+            } catch (error) {
+                console.error('Σφάλμα στην ανάκτηση των δεδομένων:', error);
+            }
+        }
+
+        // Επανάληψη της ανάκτησης δεδομένων κάθε 5 δευτερόλεπτα
+        setInterval(fetchDataFromAPI, 5000);
 
         // Google Maps API για να δείξουμε τη θέση της Ξάνθης
         function initMap() {
@@ -273,7 +297,6 @@
                 });
             }
         }
-
         // Συνάρτηση για Δοκιμαστικά Δεδομένα
         function simulateData() {
             const time = new Date().toLocaleTimeString();
