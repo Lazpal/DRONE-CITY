@@ -9,16 +9,22 @@ async function fetchDataFromAPI() {
     try {
         const response = await fetch('https://drone-city.onrender.com/data');  // Βάλε το σωστό URL του API
         if (!response.ok) {
-            throw new Error('Σφάλμα στην επικοινωνία με το API');
+            if (response.status >= 500) {
+                throw new Error('Server error: Αποτυχία σύνδεσης με τον διακομιστή.');
+            } else if (response.status === 404) {
+                throw new Error('Error 404: Το API δεν βρέθηκε.');
+            } else {
+                throw new Error('Error: Αποτυχία λήψης των δεδομένων.');
+            }
         }
-        
+
         const data = await response.json();
 
         // Ενημέρωση των δεδομένων στην ιστοσελίδα
         document.getElementById('temperature').innerText = `Θερμοκρασία: ${data.temperature}°C`;
         document.getElementById('airQuality').innerText = `Ποιότητα Αέρα: Δείκτης ${data.airQuality}`;
         document.getElementById('traffic').innerText = `Κίνηση: ${data.traffic}`;
-        
+
         // Ενημέρωση περισσότερων δεδομένων (π.χ., υγρασία και πίεση)
         document.getElementById('humidity').innerText = `Υγρασία: ${data.humidity}%`;
         document.getElementById('pressure').innerText = `Πίεση: ${data.pressure} hPa`;
@@ -28,10 +34,10 @@ async function fetchDataFromAPI() {
 
         // Log μηνύματα για debugging
         console.log('Δεδομένα που ελήφθησαν:', data);
-        
+
     } catch (error) {
-        console.error('Σφάλμα στην ανάκτηση των δεδομένων:', error);
-        showModal('Σφάλμα στην ανάκτηση των δεδομένων. Παρακαλώ δοκιμάστε ξανά αργότερα.');
+        console.error('Σφάλμα στην ανάκτηση των δεδομένων:', error.message);
+        showModal(`Σφάλμα: ${error.message}`);
     }
 }
 
@@ -107,6 +113,9 @@ function showModal(message) {
 function closeModal() {
     document.getElementById('alertModal').style.display = 'none';
 }
+
+// Κάνε κλήση στο API αμέσως μόλις φορτώσει η σελίδα
+fetchDataFromAPI();
 
 // Αρχικοποίηση χάρτη και dark mode προτίμησης
 initMap();
