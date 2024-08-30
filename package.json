@@ -1,7 +1,7 @@
 {
   "name": "code",
   "version": "1.0.0",
-  "main": "API Server (Node.js Express Example).js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
