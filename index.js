@@ -9,7 +9,13 @@ app.use(express.json());
 // Ενεργοποίηση CORS για να επιτρέψουμε αιτήσεις από διαφορετικά domains
 app.use(cors());
 
-let sensorData = {};  // Θα αποθηκεύουμε τα δεδομένα του αισθητήρα εδώ προσωρινά
+let sensorData = {
+  temperature: '--',
+  airQuality: '--',
+  traffic: '--',
+  humidity: '--',
+  pressure: '--'
+};  // Αρχικές τιμές για τα δεδομένα
 
 // Endpoint για να λαμβάνει δεδομένα από το Arduino
 app.post('/data', (req, res) => {
@@ -21,6 +27,49 @@ app.post('/data', (req, res) => {
 // Endpoint για να παρέχουμε τα δεδομένα στην ιστοσελίδα
 app.get('/data', (req, res) => {
   res.json(sensorData);
+});
+
+// Νέο HTML endpoint για εμφάνιση των δεδομένων στη σελίδα
+app.get('/html-data', (req, res) => {
+  const html = `
+    <!DOCTYPE html>
+    <html lang="el">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Παρακολούθηση Δεδομένων σε Πραγματικό Χρόνο</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 20px;
+                background-color: #121212;
+                color: #f4f4f9;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            .data-box {
+                font-size: 18px;
+                padding: 10px;
+                background-color: #1e1e1e;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 300px;
+                margin: 10px auto;
+                color: #f4f4f9;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Παρακολούθηση Δεδομένων σε Πραγματικό Χρόνο</h1>
+        <div class="data-box">Θερμοκρασία: ${sensorData.temperature}°C</div>
+        <div class="data-box">Ποιότητα Αέρα: Δείκτης ${sensorData.airQuality}</div>
+        <div class="data-box">Κίνηση: ${sensorData.traffic}</div>
+        <div class="data-box">Υγρασία: ${sensorData.humidity}%</div>
+        <div class="data-box">Πίεση: ${sensorData.pressure} hPa</div>
+    </body>
+    </html>
+  `;
+  res.send(html);  // Επιστρέφουμε τη δυναμικά δημιουργημένη HTML σελίδα
 });
 
 app.listen(port, () => {
