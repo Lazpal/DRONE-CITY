@@ -57,6 +57,7 @@ app.get('/html-data', (req, res) => {
         <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
             Πίεση: ${sensorData.pressure} hPa
         </div>
+        <p style="background-image: url('img_girl.jpg');">
     </body>
     </html>
   `;
