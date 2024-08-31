@@ -29,7 +29,7 @@ app.get('/data', (req, res) => {
   res.json(sensorData);
 });
 
-// Νέο HTML endpoint για εμφάνιση των δεδομένων στη σελίδα
+// Νέο HTML endpoint για εμφάνιση των δεδομένων στη σελίδα με inline CSS και αυτόματη ανανέωση
 app.get('/html-data', (req, res) => {
   const html = `
     <!DOCTYPE html>
@@ -38,34 +38,25 @@ app.get('/html-data', (req, res) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Παρακολούθηση Δεδομένων σε Πραγματικό Χρόνο</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                padding: 20px;
-                background-color: #121212;
-                color: #f4f4f9;
-                transition: background-color 0.3s, color 0.3s;
-            }
-            .data-box {
-                font-size: 18px;
-                padding: 10px;
-                background-color: #1e1e1e;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                width: 300px;
-                margin: 10px auto;
-                color: #f4f4f9;
-            }
-        </style>
+        <meta http-equiv="refresh" content="5"> <!-- Αυτόματη ανανέωση κάθε 5 δευτερόλεπτα -->
     </head>
-    <body>
+    <body style="font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #121212; color: #f4f4f9; transition: background-color 0.3s, color 0.3s;">
         <h1>Παρακολούθηση Δεδομένων σε Πραγματικό Χρόνο</h1>
-        <div class="data-box">Θερμοκρασία: ${sensorData.temperature}°C</div>
-        <div class="data-box">Ποιότητα Αέρα: Δείκτης ${sensorData.airQuality}</div>
-        <div class="data-box">Κίνηση: ${sensorData.traffic}</div>
-        <div class="data-box">Υγρασία: ${sensorData.humidity}%</div>
-        <div class="data-box">Πίεση: ${sensorData.pressure} hPa</div>
+        <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
+            Θερμοκρασία: ${sensorData.temperature}°C
+        </div>
+        <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
+            Ποιότητα Αέρα: Δείκτης ${sensorData.airQuality}
+        </div>
+        <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
+            Κίνηση: ${sensorData.traffic}
+        </div>
+        <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
+            Υγρασία: ${sensorData.humidity}%
+        </div>
+        <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
+            Πίεση: ${sensorData.pressure} hPa
+        </div>
     </body>
     </html>
   `;
