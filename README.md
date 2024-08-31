@@ -6,3 +6,5 @@
   https://drone-city-website.onrender.com
 
   https://drone-city.onrender.com
+
+https://drone-city.onrender.com/html-data
