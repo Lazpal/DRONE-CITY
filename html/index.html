@@ -19,9 +19,12 @@
         <div id="pressure" class="data-box">Πίεση: --hPa</div>
     </div>
 
-    <!-- Κουμπιά για Δοκιμαστικά Δεδομένα και Στατιστικά -->
-    <button onclick="simulateData()">Δοκιμαστικά Δεδομένα</button>
-    <button onclick="openStatsPage()">Προβολή Στατιστικών</button>
+    <!-- Ενσωμάτωση API Status -->
+    <div class="tooltip-container" id="apiStatusContainer">
+        <span class="tooltip" id="apiStatusTooltip">API Status: Unknown</span>
+        <span class="text" id="apiStatusIcon"></span>
+    </div>
+    <p id="lastUpdate">Τελευταία ανανέωση: --</p>
 
     <!-- Modal για ειδοποιήσεις -->
     <div id="alertModal">
