@@ -17,7 +17,6 @@ async function fetchDataFromAPI() {
 
         const responseTime = (endTime - startTime).toFixed(2); // Χρόνος απόκρισης σε ms
 
-        // Έλεγχος για κωδικό κατάστασης (status code)
         if (!response.ok) {
             throw new Error(`Error: ${response.status} - ${response.statusText}`);
         }
@@ -47,11 +46,14 @@ async function fetchDataFromAPI() {
         console.log('Δεδομένα που ελήφθησαν:', data);
 
     } catch (error) {
+        const endTime = performance.now();    // Καταγραφή χρόνου ολοκλήρωσης ακόμα και σε περίπτωση σφάλματος
+        const responseTime = (endTime - startTime).toFixed(2); // Χρόνος απόκρισης σε ms
+
         console.error('Σφάλμα στην ανάκτηση των δεδομένων:', error.message);
         
-        // Ενημέρωση του API Status σε κόκκινο και εμφάνιση του μηνύματος σφάλματος
+        // Ενημέρωση του API Status σε κόκκινο και εμφάνιση του χρόνου απόκρισης μαζί με το σφάλμα
         apiStatusContainer.classList.add('api-error');
-        apiStatusTooltip.innerText = `Σφάλμα: ${error.message}`;
+        apiStatusTooltip.innerText = `Σφάλμα: ${error.message}\nΧρόνος Απόκρισης: ${responseTime} ms`;
         showModal(`Σφάλμα: ${error.message}`);
     }
 }
