@@ -37,7 +37,7 @@ app.get('/html-data', (req, res) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><img src="https://github.com/user-attachments/assets/080e34d8-3290-4632-82b9-ab89d184ff61" ></img>Παρακολούθηση Δεδομένων σε Πραγματικό Χρόνο</title>
+        <title>Παρακολούθηση Δεδομένων σε Πραγματικό Χρόνο</title>
         <meta http-equiv="refresh" content="5"> <!-- Αυτόματη ανανέωση κάθε 5 δευτερόλεπτα -->
     </head>
     <body style="font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #121212; color: #f4f4f9; transition: background-color 0.3s, color 0.3s;">
