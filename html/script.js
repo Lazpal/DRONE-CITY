@@ -12,7 +12,7 @@ async function fetchDataFromAPI() {
     
     try {
         const startTime = performance.now();  // Καταγραφή χρόνου εκκίνησης
-        const response = await fetch('https://your-app-name.onrender.com/data');  // Βάλε το σωστό URL του API
+        const response = await fetch('https://drone-city.onrender.com/data');  // Βάλε το σωστό URL του API
         const endTime = performance.now();    // Καταγραφή χρόνου ολοκλήρωσης
 
         const responseTime = (endTime - startTime).toFixed(2); // Χρόνος απόκρισης σε ms
