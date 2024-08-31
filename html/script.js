@@ -11,7 +11,7 @@ async function fetchDataFromAPI() {
     const lastUpdateElement = document.getElementById('lastUpdate');
     
     try {
-        const response = await fetch('https://your-app-name.onrender.com/data');  // Βάλε το σωστό URL του API
+        const response = await fetch('https://drone-city.onrender.com/data');  // Βάλε το σωστό URL του API
         if (!response.ok) {
             if (response.status >= 500) {
                 throw new Error('Server error: Αποτυχία σύνδεσης με τον διακομιστή.');
