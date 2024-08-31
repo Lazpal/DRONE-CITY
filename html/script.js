@@ -11,7 +11,12 @@ async function fetchDataFromAPI() {
     const lastUpdateElement = document.getElementById('lastUpdate');
     
     try {
-        const response = await fetch('https://drone-city.onrender.com/data');  // Βάλε το σωστό URL του API
+        const startTime = performance.now();  // Καταγραφή χρόνου εκκίνησης
+        const response = await fetch('https://your-app-name.onrender.com/data');  // Βάλε το σωστό URL του API
+        const endTime = performance.now();    // Καταγραφή χρόνου ολοκλήρωσης
+
+        const responseTime = (endTime - startTime).toFixed(2); // Χρόνος απόκρισης σε ms
+
         if (!response.ok) {
             if (response.status >= 500) {
                 throw new Error('Server error: Αποτυχία σύνδεσης με τον διακομιστή.');
@@ -33,7 +38,7 @@ async function fetchDataFromAPI() {
 
         // Ενημέρωση του API Status και του χρόνου ανανέωσης
         apiStatusContainer.classList.remove('api-error');
-        apiStatusTooltip.innerText = 'API Status: Active';
+        apiStatusTooltip.innerText = `API Status: Active\nΧρόνος Απόκρισης: ${responseTime} ms`;
         
         const now = new Date();
         lastUpdateElement.innerText = `Τελευταία ανανέωση: ${now.toLocaleString()}`;
