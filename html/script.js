@@ -17,17 +17,17 @@ async function fetchDataFromAPI() {
 
         const responseTime = (endTime - startTime).toFixed(2); // Χρόνος απόκρισης σε ms
 
+        // Έλεγχος για κωδικό κατάστασης (status code)
         if (!response.ok) {
-            if (response.status >= 500) {
-                throw new Error('Server error: Αποτυχία σύνδεσης με τον διακομιστή.');
-            } else if (response.status === 404) {
-                throw new Error('Error 404: Το API δεν βρέθηκε.');
-            } else {
-                throw new Error('Error: Αποτυχία λήψης των δεδομένων.');
-            }
+            throw new Error(`Error: ${response.status} - ${response.statusText}`);
         }
 
         const data = await response.json();
+
+        // Επιπλέον έλεγχος για την εγκυρότητα των δεδομένων
+        if (!data.temperature || !data.airQuality || !data.traffic) {
+            throw new Error('Το API δεν επιστρέφει έγκυρα δεδομένα.');
+        }
 
         // Ενημέρωση των δεδομένων στην ιστοσελίδα
         document.getElementById('temperature').innerText = `Θερμοκρασία: ${data.temperature}°C`;
