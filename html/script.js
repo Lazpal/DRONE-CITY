@@ -7,7 +7,7 @@ let currentPressure = 0;
 // Συνάρτηση για την Ανάκτηση Δεδομένων από το API
 async function fetchDataFromAPI() {
     try {
-        const response = await fetch('https://drone-city.onrender.com/data');  // Βάλε το σωστό URL του API
+        const response = await fetch('https://your-app-name.onrender.com/data');  // Βάλε το σωστό URL του API
         if (!response.ok) {
             if (response.status >= 500) {
                 throw new Error('Server error: Αποτυχία σύνδεσης με τον διακομιστή.');
@@ -64,26 +64,6 @@ function initMap() {
     });
 }
 
-// Ενεργοποίηση Dark Mode κατά την αρχική φόρτωση
-function loadDarkModePreference() {
-    const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
-    const darkModeSwitch = document.getElementById('darkModeSwitch');
-    if (darkModeEnabled) {
-        document.body.classList.add('dark-mode');
-        darkModeSwitch.checked = true;
-    } else {
-        document.body.classList.remove('dark-mode');
-        darkModeSwitch.checked = false;
-    }
-}
-
-function toggleDarkMode() {
-    const isDarkMode = document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkModeEnabled', isDarkMode.toString());
-}
-
-document.getElementById('darkModeSwitch').addEventListener('change', toggleDarkMode);
-
 // Αποστολή ειδοποιήσεων στον Browser
 function sendNotification(title, body) {
     if (Notification.permission === "granted") {
@@ -117,6 +97,5 @@ function closeModal() {
 // Κάνε κλήση στο API αμέσως μόλις φορτώσει η σελίδα
 fetchDataFromAPI();
 
-// Αρχικοποίηση χάρτη και dark mode προτίμησης
+// Αρχικοποίηση χάρτη
 initMap();
-loadDarkModePreference();
