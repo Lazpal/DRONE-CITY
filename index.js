@@ -1,7 +1,12 @@
 const express = require('express');
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
+const http = require('http');
+const WebSocket = require('ws');
+
 const app = express();
 const port = process.env.PORT || 8080;
+const secretKey = 'your_secret_key';  // Θα πρέπει να το αποθηκεύσεις σε μεταβλητή περιβάλλοντος σε παραγωγή
 
 // Middleware για την υποστήριξη JSON requests
 app.use(express.json());
@@ -17,20 +22,49 @@ let sensorData = {
   pressure: '--'
 };  // Αρχικές τιμές για τα δεδομένα
 
+// Middleware για έλεγχο JWT
+function authenticateToken(req, res, next) {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (!token) return res.sendStatus(401);  // Αν δεν υπάρχει token, επιστρέφουμε 401
+
+  jwt.verify(token, secretKey, (err, user) => {
+    if (err) return res.sendStatus(403);  // Αν το token δεν είναι έγκυρο, επιστρέφουμε 403
+    req.user = user;
+    next();
+  });
+}
+
+// Endpoint για την έκδοση JWT (π.χ., μετά από login)
+app.post('/login', (req, res) => {
+  const username = req.body.username;
+  const user = { name: username };
+
+  const accessToken = jwt.sign(user, secretKey);
+  res.json({ accessToken });
+});
+
+// Προστατευμένα Endpoints που απαιτούν JWT
+
 // Endpoint για να λαμβάνει δεδομένα από το Arduino
-app.post('/data', (req, res) => {
+app.post('/data', authenticateToken, (req, res) => {
   sensorData = req.body;  // Αποθηκεύουμε τα δεδομένα
   console.log('Received Data:', sensorData);
+  
+  // Αποστολή δεδομένων μέσω WebSocket σε όλους τους συνδεδεμένους πελάτες
+  broadcastData();
+  
   res.status(200).send('Data received');
 });
 
 // Endpoint για να παρέχουμε τα δεδομένα στην ιστοσελίδα
-app.get('/data', (req, res) => {
+app.get('/data', authenticateToken, (req, res) => {
   res.json(sensorData);
 });
 
-// Νέο HTML endpoint για εμφάνιση των δεδομένων στη σελίδα με inline CSS και αυτόματη ανανέωση
-app.get('/html-data', (req, res) => {
+// Νέο HTML endpoint για εμφάνιση των δεδομένων στη σελίδα
+app.get('/html-data', authenticateToken, (req, res) => {
   const html = `
     <!DOCTYPE html>
     <html lang="el">
@@ -63,6 +97,35 @@ app.get('/html-data', (req, res) => {
   res.send(html);  // Επιστρέφουμε τη δυναμικά δημιουργημένη HTML σελίδα
 });
 
-app.listen(port, () => {
+// Δημιουργία του HTTP server
+const server = http.createServer(app);
+
+// Δημιουργία του WebSocket server
+const wss = new WebSocket.Server({ server });
+
+// Συνδέσεις WebSocket
+wss.on('connection', (ws) => {
+  console.log('New client connected');
+  
+  // Στέλνουμε τα τρέχοντα δεδομένα μόλις συνδεθεί κάποιος πελάτης
+  ws.send(JSON.stringify(sensorData));
+  
+  // Όταν αποσυνδεθεί ο πελάτης
+  ws.on('close', () => {
+    console.log('Client disconnected');
+  });
+});
+
+// Αποστολή δεδομένων σε όλους τους συνδεδεμένους πελάτες
+function broadcastData() {
+  wss.clients.forEach((client) => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(JSON.stringify(sensorData));
+    }
+  });
+}
+
+// Εκκίνηση του server
+server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
