@@ -1,4 +1,9 @@
 # DRONE-CITY
+
+#Deploy hook
+Your private URL to trigger a deploy for this server. Remember to keep this a secret.  https://api.render.com/deploy/srv-cr8qvs5svqrc739eph30?key=0DbPICcppJw
+
+
   https://drone-city-website.onrender.com/index.html 
 
   https://dashboard.render.com/
