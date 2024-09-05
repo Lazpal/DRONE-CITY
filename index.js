@@ -9,7 +9,7 @@ app.use(express.json());
 // Ενεργοποίηση CORS για να επιτρέψουμε αιτήσεις από διαφορετικά domains
 app.use(cors());
 
-let sensorData = {
+let jsonData = {
   temperature: '--',
   airQuality: '--',
   traffic: '--',
@@ -19,14 +19,14 @@ let sensorData = {
 
 // Endpoint για να λαμβάνει δεδομένα από το Arduino
 app.post('/data', (req, res) => {
-  sensorData = req.body;  // Αποθηκεύουμε τα δεδομένα
-  console.log('Received Data:', sensorData);
+  jsonData = req.body;  // Αποθηκεύουμε τα δεδομένα
+  console.log('Received Data:', jsonData);
   res.status(200).send('Data received');
 });
 
 // Endpoint για να παρέχουμε τα δεδομένα στην ιστοσελίδα
 app.get('/data', (req, res) => {
-  res.json(sensorData);
+  res.json(jsonData);
 });
 
 // Νέο HTML endpoint για εμφάνιση των δεδομένων στη σελίδα με inline CSS και αυτόματη ανανέωση
@@ -43,19 +43,19 @@ app.get('/html-data', (req, res) => {
     <body style="font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #121212; color: #f4f4f9; transition: background-color 0.3s, color 0.3s;">
         <h1>Παρακολούθηση Δεδομένων σε Πραγματικό Χρόνο</h1>
         <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
-            Θερμοκρασία: ${sensorData.temperature}°C
+            Θερμοκρασία: ${jsonData.temperature}°C
         </div>
         <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
-            Ποιότητα Αέρα: Δείκτης ${sensorData.airQuality}
+            Ποιότητα Αέρα: Δείκτης ${jsonData.airQuality}
         </div>
         <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
-            Κίνηση: ${sensorData.traffic}
+            Κίνηση: ${jsonData.traffic}
         </div>
         <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
-            Υγρασία: ${sensorData.humidity}%
+            Υγρασία: ${jsonData.humidity}%
         </div>
         <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
-            Πίεση: ${sensorData.pressure} hPa
+            Πίεση: ${jsonData.pressure} hPa
         </div>
     </body>
     </html>
