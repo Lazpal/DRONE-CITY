@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 443;
+const port = 443;  // Localhost port for testing
 
 // Middleware για την υποστήριξη JSON requests
 app.use(express.json());
@@ -17,10 +17,14 @@ let jsonData = {
   pressure: '--'
 };  // Αρχικές τιμές για τα δεδομένα
 
-// Endpoint για να λαμβάνει δεδομένα από το Arduino
+// Endpoint για να λαμβάνει δεδομένα από το Arduino και να ενημερώνει τη σελίδα HTML
 app.post('/data', (req, res) => {
   jsonData = req.body;  // Αποθηκεύουμε τα δεδομένα
   console.log('Received Data:', jsonData);
+
+  // Προσθήκη λογικής για να ενημερώνουμε την LED Matrix για status
+  // (Η επικοινωνία με το Arduino γίνεται μέσω άλλου μηχανισμού, θα το δούμε παρακάτω)
+
   res.status(200).send('Data received');
 });
 
@@ -63,7 +67,6 @@ app.get('/html-data', (req, res) => {
   res.send(html);  // Επιστρέφουμε τη δυναμικά δημιουργημένη HTML σελίδα
 });
 
-
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server running on http://localhost:${port}`);
 });
