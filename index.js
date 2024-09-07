@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 4000;  // Localhost port for testing
+const port = 8080;  // Localhost port for testing
 
 // Middleware για την υποστήριξη JSON requests
 app.use(express.json());
@@ -11,11 +11,9 @@ app.use(cors());
 
 let jsonData = {
   temperature: '--',
-  airQuality: '--',
-  traffic: '--',
-  humidity: '--',
-  pressure: '--'
-};  // Αρχικές τιμές για τα δεδομένα
+  humidity: '--'
+}; // Αποθήκευση δεδομένων
+
 
 // Endpoint για να λαμβάνει δεδομένα από το Arduino και να ενημερώνει τη σελίδα HTML
 app.post('/data', (req, res) => {
@@ -68,5 +66,5 @@ app.get('/html-data', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
