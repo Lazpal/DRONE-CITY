@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 443;
 
 // Middleware για την υποστήριξη JSON requests
 app.use(express.json());
