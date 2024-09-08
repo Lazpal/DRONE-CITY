@@ -1,8 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-//const port = 8080;  // Localhost port for testing
-const port = process.env.PORT || 443;
+const port = 443;  // Localhost port for testing
+//const port = process.env.PORT || 10000;
 // Middleware για την υποστήριξη JSON requests
 app.use(express.json());
 
