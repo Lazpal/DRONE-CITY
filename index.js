@@ -1,8 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 80;  // Localhost port for testing
-//const port = process.env.PORT || 10000;
+const port = process.env.PORT || 3000;  // Port από το Glitch
+
 // Middleware για την υποστήριξη JSON requests
 app.use(express.json());
 
@@ -11,18 +11,20 @@ app.use(cors());
 
 let jsonData = {
   temperature: '--',
-  humidity: '--'
-}; // Αποθήκευση δεδομένων
-
+  aqi: '--',
+  tvoc: '--',
+  eco2: '--',
+  traffic: '--',
+  humidity: '--',
+  pressure: '--',
+  arduino_status: '--'
+};  // Αρχικές τιμές για τα δεδομένα
 
 // Endpoint για να λαμβάνει δεδομένα από το Arduino και να ενημερώνει τη σελίδα HTML
 app.post('/data', (req, res) => {
-  jsonData = req.body;  // Αποθηκεύουμε τα δεδομένα
+  console.log('Received POST request');
+  jsonData = req.body;  // Αποθηκεύουμε τα δεδομένα που λαμβάνονται από το Arduino
   console.log('Received Data:', jsonData);
-
-  // Προσθήκη λογικής για να ενημερώνουμε την LED Matrix για status
-  // (Η επικοινωνία με το Arduino γίνεται μέσω άλλου μηχανισμού, θα το δούμε παρακάτω)
-
   res.status(200).send('Data received');
 });
 
@@ -48,7 +50,13 @@ app.get('/html-data', (req, res) => {
             Θερμοκρασία: ${jsonData.temperature}°C
         </div>
         <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
-            Ποιότητα Αέρα: Δείκτης ${jsonData.airQuality}
+            Ποιότητα Αέρα: Δείκτης ${jsonData.aqi}
+        </div>
+        <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
+            Concentration Reference: TVOC ${jsonData.tvoc} ppb
+        </div>
+        <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
+            Concentration Reference: eCO2/CO2 ${jsonData.eco2} ppb
         </div>
         <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
             Κίνηση: ${jsonData.traffic}
@@ -59,12 +67,16 @@ app.get('/html-data', (req, res) => {
         <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
             Πίεση: ${jsonData.pressure} hPa
         </div>
+        <div style="font-size: 18px; padding: 10px; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; color: #f4f4f9;">
+            Arduino status: ${jsonData.arduino_status}
+        </div>
     </body>
     </html>
   `;
   res.send(html);  // Επιστρέφουμε τη δυναμικά δημιουργημένη HTML σελίδα
 });
 
+// Ξεκίνηση του server στο Glitch
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
