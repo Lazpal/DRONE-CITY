@@ -1,10 +1,10 @@
 {
-  "name": "arduino-api-backend",
+  "name": "arduino-api",
   "version": "1.0.0",
-  "description": "Backend server για την επικοινωνία με Arduino",
-  "main": "index.js",
+  "description": "Arduino data collection API",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
