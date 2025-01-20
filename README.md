@@ -1,37 +1,57 @@
 # DRONE-CITY
 
-#Deploy hook
-Your private URL to trigger a deploy for this server. Remember to keep this a secret.  https://api.render.com/deploy/srv-cr8qvs5svqrc739eph30?key=0DbPICcppJw
+![Logo](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city.png?v=1726320962120)
+©lazpal2025
 
+# Περιγραφή Πρότζεκτ
+<b> Real-Time Data Monitoring API :</b><br>
+Αυτό το project αναπτύχθηκε για να παρέχει δεδομένα αισθητήρων σε πραγματικό χρόνο από ένα Arduino και να τα παρουσιάζει σε διάφορες μορφές HTML rendering.
 
-  https://drone-city-website.onrender.com/index.html 
+# Οδηγίες Εγκατάστασης
+## DRONE CITY WIRE TUTORIAL
+https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content=DAGaOqh2x0Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-  https://dashboard.render.com/
+# WEBSITE
+  https://drone-city.glitch.me/
 
-  https://drone-city-website.onrender.com
+## API
+  https://drone-city-api.glitch.me/
 
-  https://drone-city.onrender.com
+## API Endpoints
+- **GET /data**: Ανάκτηση δεδομένων αισθητήρων.
+- **POST /data**: Αποστολή δεδομένων αισθητήρων.
+- **GET /html-data**: Δυναμική σελίδα HTML με τα τρέχοντα δεδομένα.
+- **GET /test**: 
+- **POST /test-form**: 
+- **POST /restart**: 
+<hr>
+# CASE on 3D cad
+https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/DRONE%20CITY%20CASE%20V9%20LAST_kapaki%20v2.3mf?v=1735068719473
+<br>
+https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/DRONE%20CITY%20CASE%20V9%20LAST_main%20Body%20v2.3mf?v=1735068730082
 
-https://drone-city.onrender.com/html-data
+![3D cad](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/DRONE%20CITY%20CASE%20V9%20LAST%20v6.obj.png?v=1733138383023)
 
+<hr>
 
-# ![1](https://github.com/user-attachments/assets/080e34d8-3290-4632-82b9-ab89d184ff61)
+## Σύνδεσμοι
+
+# Business Plan DRONE CITY
+https://www.canva.com/design/DAGVt87-BB4/bTucy8LhuNCnH3ldCIeSRg/edit?utm_content=DAGVt87-BB4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+# DRONE CITY WIRE TUTORIAL
+https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content=DAGaOqh2x0Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+# Android APP (APK)
+https://drive.usercontent.google.com/download?id=1AdrvETzRNtrS2hXJykAjjGW3sVNY7A8F&export=download&authuser=0
 
 -----------------
-# Real-Time Data Monitoring API
 
-Αυτό το API αναπτύχθηκε για να παρέχει δεδομένα αισθητήρων σε πραγματικό χρόνο από ένα Arduino και να τα παρουσιάζει σε διάφορες μορφές HTML rendering.
+## Εικόνες 
+![Screenshot](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city55.png?v=1726320965795)
+![Screenshot](https://github.com/user-attachments/assets/080e34d8-3290-4632-82b9-ab89d184ff61)
+![Screenshot](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city%20logo%20design.png?v=1726322758669)
 
-## Περιεχόμενα
+©lazpal2025
 
-- [Λειτουργίες](#λειτουργίες)
-- [Οδηγίες Εγκατάστασης](#οδηγίες-εγκατάστασης)
-- [Οδηγίες Χρήσης](#οδηγίες-χρήσης)
-- [API Endpoints](#api-endpoints)
-
-## Λειτουργίες
-
-1. **Διαχείριση Δεδομένων μέσω HTTP**
-   - Υποστηρίζει POST και GET αιτήσεις στο endpoint `/data` για αποστολή και ανάκτηση δεδομένων αισθητήρων.
-2. **HTML Rendering**
-   - Δυναμικά δημιουργημένη HTML σελίδα στο endpoint `/html-data`, που εμφανίζει τα τρέχοντα δεδομένα και ανανεώνεται αυτόματα κάθε 5 δευτερόλεπτα.
+```
