@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Στατιστικά και Logs</title>
+
+    <!-- Σύνδεση με Material Icons από την Google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        /* In-line CSS για τη σελίδα "logs.html" */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f4f4f9;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            opacity: 0;
+            animation: zoomIn 0.8s forwards;
+        }
+
+        .stat-box i {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .stat-box h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .logs {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            opacity: 0;
+            animation: zoomIn 0.8s forwards;
+        }
+
+        .log-item {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            border-bottom: 1px solid #3c3c3c;
+            padding-bottom: 10px;
+        }
+
+        .log-item i {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Καθυστέρηση εμφάνισης για κάθε στοιχείο */
+        .stat-box:nth-child(2) { animation-delay: 0.3s; }
+        .stat-box:nth-child(3) { animation-delay: 0.6s; }
+        .logs { animation-delay: 0.9s; }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Στατιστικά και Logs</h1>
+        <p>Εδώ μπορείτε να βρείτε στατιστικά στοιχεία και πρόσφατα logs από το σύστημα παρακολούθησης.</p>
+
+        <!-- Στατιστικά -->
+        <div class="stats">
+            <div class="stat-box">
+                <i class="material-icons" style="color: #ff4500;">thermostat</i>
+                <h3>Μέση Θερμοκρασία</h3>
+                <p>28°C</p>
+            </div>
+            <div class="stat-box">
+                <i class="material-icons" style="color: #00ced1;">air</i>
+                <h3>Μέση Ποιότητα Αέρα</h3>
+                <p>120 AQI</p>
+            </div>
+            <div class="stat-box">
+                <i class="material-icons" style="color: #1e90ff;">water_drop</i>
+                <h3>Μέση Υγρασία</h3>
+                <p>65%</p>
+            </div>
+        </div>
+
+        <!-- Logs -->
+        <div class="logs">
+            <h2>Πρόσφατα Logs</h2>
+            <div class="log-item">
+                <i class="material-icons" style="color: #ffcc00;">cloud</i>
+                <span>Ποιότητα Αέρα - 140 AQI (16/09/2024 14:30)</span>
+            </div>
+            <div class="log-item">
+                <i class="material-icons" style="color: #ff4500;">thermostat</i>
+                <span>Θερμοκρασία - 33°C (16/09/2024 14:15)</span>
+            </div>
+            <div class="log-item">
+                <i class="material-icons" style="color: #00ced1;">air</i>
+                <span>Επίπεδα CO2 - 950 ppm (16/09/2024 14:00)</span>
+            </div>
+            <div class="log-item">
+                <i class="material-icons" style="color: #1e90ff;">water_drop</i>
+                <span>Υγρασία - 70% (16/09/2024 13:45)</span>
+            </div>
+        </div>
+
+        <button onclick="window.history.back()">Επιστροφή</button> <!-- Κουμπί για επιστροφή στη σελίδα -->
+    </div>
+</body>
+</html>
