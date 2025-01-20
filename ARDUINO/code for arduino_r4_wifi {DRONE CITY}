@@ -1,4 +1,7 @@
  //DRONE CITY CODE (no bugs)
+ //©lazpal2025
+
+
 //code for arduino_r4_wifi {DRONE CITY}
 
 #include <WiFiS3.h>              // Βιβλιοθήκη WiFi
