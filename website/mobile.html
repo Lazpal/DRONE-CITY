@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>Παρακολούθηση Ξάνθης (Κινητό)</title>
+    <!-- Font Awesome για εικονίδια -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="mobile-style.css">
+    <link rel="icon" href="https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/1.png?v=1726435044877">
+    <style>
+        @keyframes blink {
+            0%, 100% { background-color: #ffcc00; color: #121212; }
+            50% { background-color: #1e1e1e; color: #f4f4f9; }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+    </style>
+  </head>
+
+<body>
+  
+    <!-- Μικρότερο και απλούστερο banner για κινητές συσκευές -->
+    <div id="mobile-banner">
+      <a href="https://sites.google.com/view/drone-city/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1"> <img src="https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city.png?v=1726320962120" alt="Banner Image" id="mobileBannerImage" onclick="https://sites.google.com/view/drone-city/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1"></a>
+    </div>
+
+    <h2>Δεδομένα σε Πραγματικό Χρόνο</h2>
+    <div id="mobile-info">
+        <div class="data-container">
+            <div id="temperature" class="mobile-data-box">
+                <i class="fas fa-thermometer-half"></i> Θερμοκρασία: --°C
+            </div>
+            <div id="aqi" class="mobile-data-box">
+                <i class="fas fa-cloud"></i> Ποιότητα Αέρα: Δείκτης --
+            </div>
+        </div>
+        <div class="data-container">
+            <div id="voc" class="mobile-data-box">
+                <i class="fas fa-wind"></i> VOC: -- ppb
+            </div>
+            <div id="co2" class="mobile-data-box">
+                <i class="fas fa-smog"></i> CO2: -- ppm
+            </div>
+        </div>
+        <div class="data-container">
+            <div id="traffic" class="mobile-data-box">
+                <i class="fas fa-car"></i> Κίνηση: --
+            </div>
+            <div id="humidity" class="mobile-data-box">
+                <i class="fas fa-tint"></i> Υγρασία: --%
+            </div>
+        </div>
+        <div class="data-container">
+            <div id="pressure" class="mobile-data-box">
+                <i class="fas fa-tachometer-alt"></i> Πίεση: -- hPa
+            </div>
+        </div>
+      <div id="fireWarningBox" class="fire-warning-box" style="display: none;">
+    <i class="fas fa-fire"></i> Προειδοποίηση: Εντοπίστηκε φωτιά!
+</div>
+    </div>
+
+  <!-- Προσθήκη κόκκινου modal για την προειδοποίηση φωτιάς -->
+<div id="fireAlertModal" class="modal">
+    <div class="modal-content fire-modal">
+        <span class="close" onclick="closeFireModal()">&times;</span>
+        <div id="fireAlertIcon" style="font-size: 40px; margin-bottom: 15px;">
+            <i class="fas fa-fire"></i>
+        </div>
+        <p id="fireAlertMessage">Προσοχή: Ανιχνεύθηκε φωτιά στην περιοχή!</p>
+    </div>
+</div>
+
+  
+    <!-- Ενσωμάτωση API Status με απλούστερο tooltip για κινητά -->
+    <div class="mobile-tooltip-container" id="apiStatusContainer">
+        <span class="mobile-tooltip" id="apiStatusTooltip">API Status: Unknown</span>
+        <span class="text" id="apiStatusIcon"></span>
+    </div>
+    <p id="lastUpdate">Τελευταία ανανέωση: --</p>
+<!-- Modal για την προειδοποίηση -->
+<div id="alertModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="alertIcon" style="font-size: 40px; margin-bottom: 15px;"></div> <!-- Προσθήκη εικονιδίου -->
+        <p id="alertMessage">Δεν προτείνουμε την έξοδο.</p>
+        <!-- Προσθήκη εικονιδίου πληροφοριών -->
+        <i id="moreInfoIcon" class="fas fa-info-circle" onclick="location.href='/info.html'" title="Μάθετε περισσότερα"></i>
+    </div>
+</div>
+
+
+    <!-- Χάρτης στο κάτω μέρος -->
+    <div id="mobile-map"></div>
+  
+    <script src="mobile-script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+</body>
+</html>

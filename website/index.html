@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Παρακολούθηση Ξάνθης σε Πραγματικό Χρόνο</title>
+    <!-- Font Awesome για εικονίδια -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/1.png?v=1726435044877">
+  
+</head>
+<body>
+  
+    <!-- Banner με εικόνα στο κέντρο -->
+    <div id="banner">
+        <img src="https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city.png?v=1726320962120" alt="Banner Image" id="bannerImage">
+    </div>
+
+
+    <h2>Δεδομένα σε Πραγματικό Χρόνο</h2>
+    <div id="info">
+        <div id="temperature" class="data-box">
+            <i class="fas fa-thermometer-half"></i> Θερμοκρασία: --°C
+        </div>
+        <div id="aqi" class="data-box">
+            <i class="fas fa-cloud"></i> Ποιότητα Αέρα: Δείκτης --
+        </div>
+        <div id="voc" class="data-box">
+            <i class="fas fa-wind"></i> VOC: -- KOhms
+        </div>
+        <div id="eco2" class="data-box">
+            <i class="fas fa-smog"></i> CO2: -- ppm
+        </div>
+        <div id="traffic" class="data-box">
+            <i class="fas fa-car"></i> Κίνηση: --
+        </div>
+        <div id="humidity" class="data-box">
+            <i class="fas fa-tint"></i> Υγρασία: --%
+        </div>
+        <div id="pressure" class="data-box">
+            <i class="fas fa-tachometer-alt"></i> Πίεση: -- hPa
+        </div>
+    </div>
+
+    <!-- Ενσωμάτωση API Status με Arduino Status -->
+    <div class="tooltip-container" id="apiStatusContainer">
+        <span class="tooltip" id="apiStatusTooltip">API Status: Unknown</span>
+        <span class="text" id="apiStatusIcon"></span>
+    </div>
+    <p id="lastUpdate">Τελευταία ανανέωση: --</p>
+
+    <!-- Προειδοποίηση φωτιάς -->
+    <div id="fireWarningBox" class="fire-warning-box" style="display: none;">
+        <i class="fas fa-fire"></i> Προειδοποίηση: Εντοπίστηκε φωτιά!
+    </div>
+
+    <!-- Modal για ειδοποιήσεις με εικόνα -->
+    <div id="alertModal">
+        <div id="alertModalContent">
+            <img src="https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city%20logo%20design.png?v=1726322758669" alt="Warning" id="warningIcon">
+            <p id="alertMessage"></p>
+            <button onclick="closeModal()">Κλείσιμο</button>
+        </div>
+    </div>
+
+    <!-- Modal προειδοποίησης φωτιάς -->
+    <div id="fireAlertModal" class="modal">
+        <div class="modal-content fire-modal">
+            <span class="close" onclick="closeFireModal()">&times;</span>
+            <div id="fireAlertIcon" style="font-size: 40px; margin-bottom: 15px;">
+                <i class="fas fa-fire"></i>
+            </div>
+            <p id="fireAlertMessage">Προσοχή: Ανιχνεύθηκε φωτιά στην περιοχή!</p>
+        </div>
+    </div>
+    
+    <div id="app">
+      <h5 >
+        DRONE CITY APP ↓</h5>
+        <a href="https://docs.google.com/uc?export=download&id=1AdrvETzRNtrS2hXJykAjjGW3sVNY7A8F" margin-right><img  src="https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/Download%20Android%20APK%20Badge.png?v=1734287289692" alt="Download Android APK" height="70%" width="200px"></a>
+      <h5>
+        <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGVt87-BB4&#x2F;XIFgsRFVnSoyuyAj1UIkOw&#x2F;view?utm_content=DAGVt87-BB4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
+  Business Plan Drone City</a>
+      </h5>
+  </div>
+
+    <script src="script.js"></script>
+     
+</body>
+</html>
