@@ -52,6 +52,9 @@ https://drive.usercontent.google.com/download?id=1AdrvETzRNtrS2hXJykAjjGW3sVNY7A
 ![Screenshot](https://github.com/user-attachments/assets/080e34d8-3290-4632-82b9-ab89d184ff61)
 ![Screenshot](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city%20logo%20design.png?v=1726322758669)
 
+##
+author 'lazpal'
+----
 ©lazpal2025
 
 ```
