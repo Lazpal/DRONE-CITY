@@ -1,0 +1,2 @@
+# Security Policy
+©lazpal 
