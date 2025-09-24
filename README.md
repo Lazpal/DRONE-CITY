@@ -2,8 +2,16 @@
 
 ![drone city](https://github.com/user-attachments/assets/3f86451d-77db-47f7-9cd2-3b1cdfe29471)
 ©lazpal2025 #DRONE-CITY/LICENSE
-<img width="1920" height="842" alt="drone v0 pree 1" src="https://github.com/user-attachments/assets/1b4163b1-e002-4ae9-8d89-0c4d53fb5f7e" />
-<img width="1024" height="1024" alt="drone v5 v5 (1)" src="https://github.com/user-attachments/assets/28d08563-22f5-418c-b583-4853203c56a9" />
+<table align="center">
+  <tr>
+    <td align="center">
+      <img alt="drone v0 pree 1" width="100%" src="https://github.com/user-attachments/assets/1b4163b1-e002-4ae9-8d89-0c4d53fb5f7e" />
+    </td>
+    <td align="center">
+      <img alt="drone v5 v5 (1)" width="100%" src="https://github.com/user-attachments/assets/28d08563-22f5-418c-b583-4853203c56a9" />
+    </td>
+  </tr>
+</table>
 
 # Περιγραφή Πρότζεκτ
 <b> Real-Time Data Monitoring API :</b><br>
