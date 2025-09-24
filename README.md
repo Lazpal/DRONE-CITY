@@ -51,6 +51,8 @@ https://drive.usercontent.google.com/download?id=1AdrvETzRNtrS2hXJykAjjGW3sVNY7A
 ![Screenshot](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city55.png?v=1726320965795)
 ![Screenshot](https://github.com/user-attachments/assets/080e34d8-3290-4632-82b9-ab89d184ff61)
 ![Screenshot](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city%20logo%20design.png?v=1726322758669)
+![Screenshot_appinventor DRONE_CITY-edit (1)](https://github.com/user-attachments/assets/90bd81fb-4859-4a98-9d87-a57d6709c614)
+![Screenshot_appinventor DRONE_CITY_DEV-edit (1)](https://github.com/user-attachments/assets/d9dcc839-81c8-4791-bea5-5bc7a4cdec78)
 
 ##
 author 'lazpal'
