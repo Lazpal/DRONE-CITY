@@ -17,24 +17,6 @@
 <b> Real-Time Data Monitoring API :</b><br>
 Αυτό το project αναπτύχθηκε για να παρέχει δεδομένα αισθητήρων σε πραγματικό χρόνο από ένα Arduino και να τα παρουσιάζει σε διάφορες μορφές HTML rendering.
 
-# Οδηγίες Εγκατάστασης
-## DRONE CITY WIRE TUTORIAL
-https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content=DAGaOqh2x0Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
-# WEBSITE
-  https://drone-city.glitch.me/
-
-## API
-  https://drone-city-api.glitch.me/
-
-## API Endpoints
-- **GET /data**: Ανάκτηση δεδομένων αισθητήρων.
-- **POST /data**: Αποστολή δεδομένων αισθητήρων.
-- **GET /html-data**: Δυναμική σελίδα HTML με τα τρέχοντα δεδομένα.
-- **GET /test**: 
-- **POST /test-form**: 
-- **POST /restart**: 
-<hr>
 # CASE on 3D cad
 https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/DRONE%20CITY%20CASE%20V9%20LAST_kapaki%20v2.3mf?v=1735068719473
 <br>
@@ -54,6 +36,26 @@ https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content
 
 # Android APP (APK)
 https://drive.usercontent.google.com/download?id=1AdrvETzRNtrS2hXJykAjjGW3sVNY7A8F&export=download&authuser=0
+
+
+# Οδηγίες Εγκατάστασης
+## DRONE CITY WIRE TUTORIAL
+https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content=DAGaOqh2x0Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+# WEBSITE
+  https://drone-city.glitch.me/
+
+## API
+  https://drone-city-api.glitch.me/
+
+## API Endpoints
+- **GET /data**: Ανάκτηση δεδομένων αισθητήρων.
+- **POST /data**: Αποστολή δεδομένων αισθητήρων.
+- **GET /html-data**: Δυναμική σελίδα HTML με τα τρέχοντα δεδομένα.
+- **GET /test**: 
+- **POST /test-form**: 
+- **POST /restart**: 
+<hr>
 
 -----------------
 
