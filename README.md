@@ -11,6 +11,14 @@
       <img alt="drone v5 v5 (1)" width="100%" src="https://github.com/user-attachments/assets/28d08563-22f5-418c-b583-4853203c56a9" />
     </td>
   </tr>
+   <tr>
+    <td align="center">
+      <img alt="drone v0 pree 1" width="50%" src="https://github.com/user-attachments/assets/90bd81fb-4859-4a98-9d87-a57d6709c614" />
+    </td>
+    <td align="center">
+      <img alt="drone v5 v5 (1)" width="80%" src="https://github.com/user-attachments/assets/d9dcc839-81c8-4791-bea5-5bc7a4cdec78" />
+    </td>
+  </tr>
 </table>
 
 # Περιγραφή Πρότζεκτ
@@ -43,7 +51,14 @@ https://drive.usercontent.google.com/download?id=1AdrvETzRNtrS2hXJykAjjGW3sVNY7A
 https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content=DAGaOqh2x0Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 # WEBSITE
-  https://drone-city.glitch.me/
+  https://lazpal.github.io/DRONE-CITY/website/
+  - https://lazpal.github.io/DRONE-CITY/website/me.html
+  - https://lazpal.github.io/DRONE-CITY/website/mobile.html
+  - https://lazpal.github.io/DRONE-CITY/website/index.html
+  - https://lazpal.github.io/DRONE-CITY/website/info.html
+  - https://lazpal.github.io/DRONE-CITY/website/infovoc.html
+  - https://lazpal.github.io/DRONE-CITY/website/logs.html
+  - https://lazpal.github.io/DRONE-CITY/website/test.html
 
 ## API
   https://drone-city-api.glitch.me/
