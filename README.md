@@ -2,6 +2,7 @@
 
 ![Logo](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city.png?v=1726320962120)
 ©lazpal2025 #DRONE-CITY/LICENSE
+<img width="1920" height="842" alt="drone v0 pree 1" src="https://github.com/user-attachments/assets/1b4163b1-e002-4ae9-8d89-0c4d53fb5f7e" />
 
 # Περιγραφή Πρότζεκτ
 <b> Real-Time Data Monitoring API :</b><br>
