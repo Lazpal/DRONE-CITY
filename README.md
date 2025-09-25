@@ -53,6 +53,16 @@
 <a href="https://www.plaisio.gr/Campaign/Plaisiobots/the-race-3"><img src="foto/robots_logo.png"></a>
 <a href="https://www.plaisio.gr/Campaign/Plaisiobots/the-race-3">PlaisioBots The Race 3.0</a>
 
+# WEBSITE
+  https://lazpal.github.io/DRONE-CITY/website/
+  - https://lazpal.github.io/DRONE-CITY/website/me.html
+  - https://lazpal.github.io/DRONE-CITY/website/mobile.html
+  - https://lazpal.github.io/DRONE-CITY/website/index.html
+  - https://lazpal.github.io/DRONE-CITY/website/info.html
+  - https://lazpal.github.io/DRONE-CITY/website/infovoc.html
+  - https://lazpal.github.io/DRONE-CITY/website/logs.html
+  - https://lazpal.github.io/DRONE-CITY/website/test.html
+
 
 # CASE on 3D cad
 https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/DRONE%20CITY%20CASE%20V9%20LAST_kapaki%20v2.3mf?v=1735068719473
@@ -65,7 +75,7 @@ https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/DRONE%20CITY%20CA
 
 ## Σύνδεσμοι
 
-# Business Plan DRONE CITY
+# Business Plan DRONE CITY     
 https://www.canva.com/design/DAGVt87-BB4/bTucy8LhuNCnH3ldCIeSRg/edit?utm_content=DAGVt87-BB4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 # DRONE CITY WIRE TUTORIAL
@@ -78,16 +88,6 @@ https://drive.usercontent.google.com/download?id=1AdrvETzRNtrS2hXJykAjjGW3sVNY7A
 # Οδηγίες Εγκατάστασης
 ## DRONE CITY WIRE TUTORIAL
 https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content=DAGaOqh2x0Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
-# WEBSITE
-  https://lazpal.github.io/DRONE-CITY/website/
-  - https://lazpal.github.io/DRONE-CITY/website/me.html
-  - https://lazpal.github.io/DRONE-CITY/website/mobile.html
-  - https://lazpal.github.io/DRONE-CITY/website/index.html
-  - https://lazpal.github.io/DRONE-CITY/website/info.html
-  - https://lazpal.github.io/DRONE-CITY/website/infovoc.html
-  - https://lazpal.github.io/DRONE-CITY/website/logs.html
-  - https://lazpal.github.io/DRONE-CITY/website/test.html
 
 ## API
   https://drone-city-api.glitch.me/
