@@ -35,6 +35,14 @@
       <img alt="drone v5 v5 (1)" width="60%" src="foto/IMG-d1990c6179dcb8b811039e426291c72a-V.jpg" />
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <img alt="drone v0 pree 1" src="foto/IMG-288cc85d966a14f87a6c4ef9f7b95ae9-V.jpg" />
+    </td>
+    <td align="center">
+      <img alt="drone v5 v5 (1)" src="foto/IMG-8082716beb9dbc422802f3e753e68298-V.jpg" />
+    </td>
+  </tr>
 </table>
 
 # Περιγραφή Πρότζεκτ
