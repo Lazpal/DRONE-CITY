@@ -8,15 +8,31 @@
       <img alt="drone v0 pree 1" width="100%" src="https://github.com/user-attachments/assets/1b4163b1-e002-4ae9-8d89-0c4d53fb5f7e" />
     </td>
     <td align="center">
-      <img alt="drone v5 v5 (1)" width="100%" src="https://github.com/user-attachments/assets/28d08563-22f5-418c-b583-4853203c56a9" />
+      <img alt="drone v5 v5 (1)" width="80%" src="https://github.com/user-attachments/assets/28d08563-22f5-418c-b583-4853203c56a9" />
     </td>
   </tr>
    <tr>
     <td align="center">
-      <img alt="drone v0 pree 1" width="50%" src="https://github.com/user-attachments/assets/90bd81fb-4859-4a98-9d87-a57d6709c614" />
+      <img alt="drone v0 pree 1" width="100%" src="https://github.com/user-attachments/assets/90bd81fb-4859-4a98-9d87-a57d6709c614" />
     </td>
     <td align="center">
       <img alt="drone v5 v5 (1)" width="80%" src="https://github.com/user-attachments/assets/d9dcc839-81c8-4791-bea5-5bc7a4cdec78" />
+    </td>
+  </tr>
+   <tr>
+    <td align="center">
+      <img alt="drone v0 pree 1" src="foto/DRONE CITY CASE V9 LAST v5.png" />
+    </td>
+    <td align="center">
+      <img alt="drone v5 v5 (1)" src="foto/DRONE CITY CASE V9 LAST v5 b.png" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img alt="drone v0 pree 1" src="foto/IMG-449906a95e8c0c7e065f6733488063c4-V.jpg" />
+    </td>
+    <td align="center">
+      <img alt="drone v5 v5 (1)" width="60%" src="foto/IMG-d1990c6179dcb8b811039e426291c72a-V.jpg" />
     </td>
   </tr>
 </table>
@@ -24,6 +40,11 @@
 # Περιγραφή Πρότζεκτ
 <b> Real-Time Data Monitoring API :</b><br>
 Αυτό το project αναπτύχθηκε για να παρέχει δεδομένα αισθητήρων σε πραγματικό χρόνο από ένα Arduino και να τα παρουσιάζει σε διάφορες μορφές HTML rendering.
+
+# Ο διαγωνισμός που συμμετείχε το project
+<a href="https://www.plaisio.gr/Campaign/Plaisiobots/the-race-3"><img src="foto/robots_logo.png"></a>
+<a href="https://www.plaisio.gr/Campaign/Plaisiobots/the-race-3">PlaisioBots The Race 3.0</a>
+
 
 # CASE on 3D cad
 https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/DRONE%20CITY%20CASE%20V9%20LAST_kapaki%20v2.3mf?v=1735068719473
