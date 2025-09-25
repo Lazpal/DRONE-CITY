@@ -2,6 +2,7 @@
 
 ![drone city](https://github.com/user-attachments/assets/3f86451d-77db-47f7-9cd2-3b1cdfe29471)
 ©lazpal2025 #DRONE-CITY/LICENSE
+📸
 <table align="center">
   <tr>
     <td align="center">
@@ -45,15 +46,15 @@
   </tr>
 </table>
 
-# Περιγραφή Πρότζεκτ
+# Περιγραφή Πρότζεκτ 🗒️
 <b> Real-Time Data Monitoring API :</b><br>
 Αυτό το project αναπτύχθηκε για να παρέχει δεδομένα αισθητήρων σε πραγματικό χρόνο από ένα Arduino και να τα παρουσιάζει σε διάφορες μορφές HTML rendering.
 
-# Ο διαγωνισμός που συμμετείχε το project
+# Ο διαγωνισμός που συμμετείχε το project 🏆
 <a href="https://www.plaisio.gr/Campaign/Plaisiobots/the-race-3"><img src="foto/robots_logo.png"></a>
 <a href="https://www.plaisio.gr/Campaign/Plaisiobots/the-race-3">PlaisioBots The Race 3.0</a>
 
-# WEBSITE
+# WEBSITE 🔗
   https://lazpal.github.io/DRONE-CITY/website/
   - https://lazpal.github.io/DRONE-CITY/website/me.html
   - https://lazpal.github.io/DRONE-CITY/website/mobile.html
@@ -64,7 +65,7 @@
   - https://lazpal.github.io/DRONE-CITY/website/test.html
 
 
-# CASE on 3D cad
+# CASE on 3D cad 🖨️
 https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/DRONE%20CITY%20CASE%20V9%20LAST_kapaki%20v2.3mf?v=1735068719473
 <br>
 https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/DRONE%20CITY%20CASE%20V9%20LAST_main%20Body%20v2.3mf?v=1735068730082
@@ -73,26 +74,26 @@ https://cdn.glitch.global/1b0e4ef2-383c-4c1c-848c-a26e5fad7097/DRONE%20CITY%20CA
 
 <hr>
 
-## Σύνδεσμοι
+## Σύνδεσμοι 🔗
 
-# Business Plan DRONE CITY     
+# Business Plan DRONE CITY 📜
 https://www.canva.com/design/DAGVt87-BB4/bTucy8LhuNCnH3ldCIeSRg/edit?utm_content=DAGVt87-BB4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-# DRONE CITY WIRE TUTORIAL
+# DRONE CITY WIRE TUTORIAL 🔩
 https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content=DAGaOqh2x0Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-# Android APP (APK)
+# Android APP (APK) 📱
 https://drive.usercontent.google.com/download?id=1AdrvETzRNtrS2hXJykAjjGW3sVNY7A8F&export=download&authuser=0
 
 
-# Οδηγίες Εγκατάστασης
+# Οδηγίες Εγκατάστασης 🧑🏻‍💻🔧
 ## DRONE CITY WIRE TUTORIAL
 https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content=DAGaOqh2x0Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-## API
+## API 🖥️
   https://drone-city-api.glitch.me/
 
-## API Endpoints
+## API Endpoints 🧶
 - **GET /data**: Ανάκτηση δεδομένων αισθητήρων.
 - **POST /data**: Αποστολή δεδομένων αισθητήρων.
 - **GET /html-data**: Δυναμική σελίδα HTML με τα τρέχοντα δεδομένα.
@@ -103,14 +104,14 @@ https://www.canva.com/design/DAGaOqh2x0Y/BcYAMi1m4aCvphYfd3TMWg/edit?utm_content
 
 -----------------
 
-## Εικόνες 
+## Εικόνες 🖼️
 ![Screenshot](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city55.png?v=1726320965795)
 ![Screenshot](https://github.com/user-attachments/assets/080e34d8-3290-4632-82b9-ab89d184ff61)
 ![Screenshot](https://cdn.glitch.global/85c496f4-339c-4a03-a7ab-c24872c1a54e/drone%20city%20logo%20design.png?v=1726322758669)
 
 ##
-author 'lazpal'
+✒️ author 'lazpal'
 ----
-©lazpal2025
+©️ ©lazpal2025
 
 ```
